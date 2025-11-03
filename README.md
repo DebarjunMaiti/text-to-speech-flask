@@ -48,7 +48,7 @@ cd text-to-speech-flask
 python -m venv venv
 ```
 
-🔛 3. Activate the Virtual Environment:
+🔛 3. Activate the Virtual Environment:<br>
 On Windows (PowerShell):
 ```bash
 venv\Scripts\activate
@@ -79,16 +79,17 @@ You should see output like:
  * Debugger is active!
 ```
 
-Then open your browser and visit:
+Then open your browser and visit: <br>
 👉 http://127.0.0.1:5000
 
-
+<hr>
 
 🧠 Usage
-
 1. Type a sentence in English, Hindi, or both (e.g., “Hello क्या हाल है”).
 2. Click Speak to generate speech.
 3. Click Download Audio to save the generated file locally.
+
+<hr>
 
 🧩 Tech Stack
 
@@ -99,31 +100,34 @@ Then open your browser and visit:
 | Text-to-Speech | gTTS (Google Text-to-Speech)       |
 | Deployment     | Render / PythonAnywhere (optional) |
 
-🚀 Deployment (Optional)
+<hr>
+
+🚀 Deployment (Optional)<br>
 If you want to make this app live on the internet:
 
 🥇 Deploy on Render
-1. Go to Render
+1. Go to <a href="https://render.com/">Render</a>
 2. Click New → Web Service
 3. Connect your GitHub repo
-4. Set:
-    Environment: python
+4. Set:<br>
+    Environment: python<br>
     Build Command:
 ```bash
-    pip install -r requirements.txt
+pip install -r requirements.txt
 ```
-    Start Command:
+Start Command:
 ```bash
-    python app.py
+python app.py
 ```
-5. Deploy! 🎉
-    Render will give you a public URL like:   
+5. Deploy! 🎉<br>
+Render will give you a public URL like:   
 ```pgsql 
-        https://text-to-speech-flask.onrender.com
+https://text-to-speech-flask.onrender.com
 ```
+
+<hr>
 
 📚 Example Sentences
-
 Try these:
 ```nginx
 Hello कैसे हो?
