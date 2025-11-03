@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text to Speech (Multilingual)</title>
+    <!-- Tailwind CSS for quick styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+    <div class="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-4 text-center">🗣️ Multilingual Text to Speech</h1>
+
+        <form id="ttsForm" class="flex flex-col space-y-4">
+            <textarea name="text" id="text" rows="4" 
+                      class="border rounded-lg p-2 w-full" 
+                      placeholder="Type something like: Hello कैसे हो?"></textarea>
+            <button type="submit" 
+                    class="bg-blue-600 text-white rounded-lg py-2 hover:bg-blue-700 transition">
+                Speak
+            </button>
+        </form>
+
+        <div id="audioContainer" class="mt-6 hidden">
+            <h2 class="text-lg font-semibold mb-2">Generated Speech:</h2>
+            <audio id="audioPlayer" controls class="w-full mb-3"></audio>
+
+            <!-- Download button -->
+            <a id="downloadBtn" 
+               href="#" 
+               download 
+               class="bg-green-600 hover:bg-green-700 text-white text-center rounded-lg py-2 block transition">
+                ⬇️ Download Audio
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('ttsForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(e.target);
+            const response = await fetch('/speak', { method: 'POST', body: formData });
+            const data = await response.json();
+
+            const audioPlayer = document.getElementById('audioPlayer');
+            const audioContainer = document.getElementById('audioContainer');
+            const downloadBtn = document.getElementById('downloadBtn');
+
+            // set the audio source
+            audioPlayer.src = data.audio_url;
+            // set the download link
+            downloadBtn.href = data.audio_url;
+            downloadBtn.download = 'speech_output.wav';
+
+            // reveal the audio container
+            audioContainer.classList.remove('hidden');
+            audioPlayer.play();
+        });
+    </script>
+</body>
+</html>
