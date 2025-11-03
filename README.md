@@ -18,18 +18,18 @@ and the system will convert it into **natural-sounding speech** — with an opti
 ---
 
 ## 🏗️ Project Structure
-text-to-speech-app/
-│
-├── app.py # Flask backend
-├── requirements.txt # Python dependencies
-├── README.md # Project documentation
-├── .gitignore # Ignored files for Git
-│
-├── templates/
-│ └── index.html # Frontend HTML page
-│
-├── static/
-    └── # Stores generated audio files
+text-to-speech-app/ <br>
+│<br>
+├── app.py # Flask backend<br>
+├── requirements.txt # Python dependencies<br>
+├── README.md # Project documentation<br>
+├── .gitignore # Ignored files for Git<br>
+│<br>
+├── templates/<br>
+│ └── index.html # Frontend HTML page<br>
+│<br>
+├── static/<br>
+    └── # Stores generated audio files<br>
 
 ---
 
@@ -39,8 +39,9 @@ Follow these steps to set up and run the project on your local machine 🧑‍�
 
 ### 🪄 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/text-to-speech-flask.git
+git clone https://github.com/DebarjunMaiti/text-to-speech-flask.git
 cd text-to-speech-flask
+```
 
 🧱 2. Create a Virtual Environment: 
 
