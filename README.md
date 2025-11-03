@@ -37,39 +37,47 @@ text-to-speech-app/ <br>
 
 Follow these steps to set up and run the project on your local machine 🧑‍💻
 
-### 🪄 1. Clone the Repository
+### 🌀 1. Clone the Repository
 ```bash
 git clone https://github.com/DebarjunMaiti/text-to-speech-flask.git
 cd text-to-speech-flask
 ```
 
 🧱 2. Create a Virtual Environment: 
-
+```bash
 python -m venv venv
+```
 
 🔛 3. Activate the Virtual Environment:
 On Windows (PowerShell):
-
+```bash
 venv\Scripts\activate
-
-** If you get a permissions error, run:
+```
+If you get a permissions error, run:
+```bash
 Set-ExecutionPolicy Unrestricted -Scope Process
+```
+Then try again.
 
 On macOS / Linux:
-
+```bash
 source venv/bin/activate
+```
 
 📦 4. Install Dependencies:
-
+```bash
 pip install -r requirements.txt
+```
 
 ▶️ 5. Run the Flask Application
-
+```bash
 python app.py
-
+```
 You should see output like:
+```csharp
  * Running on http://127.0.0.1:5000
  * Debugger is active!
+```
 
 Then open your browser and visit:
 👉 http://127.0.0.1:5000
@@ -101,19 +109,24 @@ If you want to make this app live on the internet:
 4. Set:
     Environment: python
     Build Command:
+```bash
     pip install -r requirements.txt
-
+```
     Start Command:
+```bash
     python app.py
-
+```
 5. Deploy! 🎉
-    Render will give you a public URL like:    
+    Render will give you a public URL like:   
+```pgsql 
         https://text-to-speech-flask.onrender.com
-        
+```
 
 📚 Example Sentences
 
 Try these:
+```nginx
 Hello कैसे हो?
 आज weather बहुत अच्छा है!
 Good morning सबको।
+```
